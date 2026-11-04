@@ -1,0 +1,41 @@
+{
+  "experiment": "realworld",
+  "study": {
+    "seed": 2027,
+    "evaluation_landmark": 7,
+    "n_replicates": 5
+  },
+  "scenarios": [
+    {
+      "name": "L2_tau8",
+      "treatment_length": 2,
+      "tau": 8
+    },
+    {
+      "name": "L2_tau16",
+      "treatment_length": 2,
+      "tau": 16
+    }
+  ],
+  "probability_floor": 0.03,
+  "weight_cap": 10,
+  "evaluation": {
+    "regime": [
+      1,
+      1
+    ],
+    "folds": 2,
+    "probability_floor": 0.03,
+    "weight_cap": 20,
+    "bootstrap_draws": 1000,
+    "bootstrap_seed": 20261005
+  },
+  "dataset": {
+    "version": "MIMIC-IV 3.1",
+    "landmark_hours": 24,
+    "grid_hours": 3,
+    "expected_patients": 8243,
+    "expected_test_patients": 1655
+  }
+}
+

@@ -1,0 +1,86 @@
+{
+  "experiment": "stress",
+  "study": {
+    "seed": 20260920,
+    "evaluation_landmark": 7,
+    "n_replicates": 5,
+    "oracle_rollouts": 1000
+  },
+  "cohorts": {
+    "n_nuisance": 2380,
+    "n_second_stage": 2422,
+    "n_test": 1198
+  },
+  "scenarios": [
+    {
+      "name": "L2_tau2",
+      "treatment_length": 2,
+      "tau": 2
+    },
+    {
+      "name": "L3_tau8",
+      "treatment_length": 3,
+      "tau": 8
+    }
+  ],
+  "simulation": {
+    "max_seq_length": 32,
+    "overlap_strength": 0.75,
+    "heterogeneity_strength": 3,
+    "feedback_strength": 0.8,
+    "event_intercept": -4,
+    "censoring_intercept": 5.2,
+    "treatment_effect_scale": 1,
+    "propensity_clip": 0.08,
+    "censoring_enabled": true
+  },
+  "probability_floor": 0.03,
+  "weight_cap": 20,
+  "calibration_seed": 8102026,
+  "calibration_patients": 1024,
+  "conditions": [
+    {
+      "name": "standard_c0",
+      "overlap_strength": 0.75,
+      "target": 0,
+      "event_intercept": -4
+    },
+    {
+      "name": "standard_c20",
+      "overlap_strength": 0.75,
+      "target": 0.2,
+      "event_intercept": -4
+    },
+    {
+      "name": "standard_c40",
+      "overlap_strength": 0.75,
+      "target": 0.4,
+      "event_intercept": -4
+    },
+    {
+      "name": "concentrated_c0",
+      "overlap_strength": 2,
+      "target": 0,
+      "event_intercept": -4
+    },
+    {
+      "name": "concentrated_c20",
+      "overlap_strength": 2,
+      "target": 0.2,
+      "event_intercept": -4
+    },
+    {
+      "name": "concentrated_c40",
+      "overlap_strength": 2,
+      "target": 0.4,
+      "event_intercept": -4
+    },
+    {
+      "name": "higher_event_c20",
+      "overlap_strength": 0.75,
+      "target": 0.2,
+      "event_intercept": -2
+    }
+  ]
+}
+

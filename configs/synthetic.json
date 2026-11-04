@@ -1,0 +1,50 @@
+{
+  "experiment": "synthetic",
+  "study": {
+    "seed": 2027,
+    "evaluation_landmark": 10,
+    "n_replicates": 5,
+    "oracle_rollouts": 1000
+  },
+  "cohorts": {
+    "n_nuisance": 1800,
+    "n_second_stage": 1800,
+    "n_test": 1200
+  },
+  "scenarios": [
+    {
+      "name": "L2_tau2",
+      "treatment_length": 2,
+      "tau": 2
+    },
+    {
+      "name": "L2_tau3",
+      "treatment_length": 2,
+      "tau": 3
+    },
+    {
+      "name": "L2_tau4",
+      "treatment_length": 2,
+      "tau": 4
+    },
+    {
+      "name": "L3_tau8",
+      "treatment_length": 3,
+      "tau": 8
+    }
+  ],
+  "simulation": {
+    "max_seq_length": 32,
+    "overlap_strength": 0.75,
+    "heterogeneity_strength": 3,
+    "feedback_strength": 0.8,
+    "event_intercept": -4,
+    "censoring_intercept": 5.2,
+    "treatment_effect_scale": 1,
+    "propensity_clip": 0.08,
+    "censoring_enabled": true
+  },
+  "probability_floor": 0.03,
+  "weight_cap": 20
+}
+

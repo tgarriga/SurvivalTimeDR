@@ -1,0 +1,3 @@
+-r ../requirements.txt
+scikit-learn>=1.7
+pyarrow>=24.0

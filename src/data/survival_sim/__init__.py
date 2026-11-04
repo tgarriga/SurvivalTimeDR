@@ -1,0 +1,1 @@
+"""Synthetic longitudinal survival simulation."""

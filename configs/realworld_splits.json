@@ -1,0 +1,6 @@
+{
+  "experiment": "realworld_splits",
+  "base_protocol": "realworld",
+  "split_seeds": [2027, 2028, 2029, 2030],
+  "original_split": 2027
+}
